@@ -1,6 +1,29 @@
 <p>Customer Module</p>
 
 
+<div style="width:45%;display: inline-block;">
+  <h2>Data From HttpClientService</h2>
+  <ul>
+    <li *ngFor="let item of users">
+      {{item?.username}}
+    </li>
+    </ul>
+
+</div>
+
+<div style="width:45%;display: inline-block;">
+  <h2>Data From Resolver</h2>
+  <ul>
+    <li *ngFor="let item of users2">
+      {{item?.username}}
+    </li>
+    </ul>
+
+</div>
+
+
+
+
 <nav>
   <a [routerLink]="['create-page']">Create Page</a>
 </nav>

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CustomersRoutingModule } from './customers-routing.module';
 import { CustomersComponent } from './customers.component';
 import { CustomerCreatePageComponent } from './customer-create-page/customer-create-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { CustomerCreatePageComponent } from './customer-create-page/customer-cre
   ],
   imports: [
     CommonModule,
-    CustomersRoutingModule
+    CustomersRoutingModule,
+    HttpClientModule
   ]
 })
 export class CustomersModule { }

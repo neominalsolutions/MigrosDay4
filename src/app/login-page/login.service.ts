@@ -23,7 +23,7 @@ export class LoginService {
      
           return {
             email:param.email,
-            roles:['order-manager'],
+            roles:['order-manager','customer-manager'],
             permissions:['InvoiceRead','InvoiceCopy','DownloadInvoiceReport'],
             token:response.token
           }
