@@ -16,7 +16,7 @@
 
 <!-- dinamik value gönderdik -->
 <!-- | translate ile sayfada translate işlemi yaparız. -->
-<div>{{ 'HELLO' | translate:{value:'mert'} }}</div>
+<div>{{ 'HELLO' | translate:{value:'mert',deneme:'sdsad'} }}</div>
 
 <!-- translate directive ile -->
 <div [translate]="'HELLO'" [translateParams]="{value: 'world'}"></div>
@@ -25,6 +25,8 @@
 <div translate [translateParams]="{value: 'world'}">HELLO</div>
 
 
+
+<button (click)="getLangValue()">Translate Instant Kullanımı</button>
 
 
 <router-outlet></router-outlet>
