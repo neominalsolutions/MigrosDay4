@@ -1,0 +1,11 @@
+{
+  "HELLO": "CMS Merhaba {{value}}",
+  "HomePage":{
+    "title":"CMS Home",
+    "content":"<div>Deneme 1</div>"
+  },
+  "ProductsPage":{
+    "unitprice":"Birim Fiyat",
+    "stock":"Stok"
+  }
+}

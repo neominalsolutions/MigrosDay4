@@ -1,0 +1,8 @@
+{
+  "HELLO": "Hello {{value}}",
+  "HomePage":{
+    "title":"Home",
+    "content":"<div>Test 1</div>"
+  },
+  "AddToCart":"Add to Cart"
+}

@@ -1,0 +1,8 @@
+{
+  "HELLO": "Merhaba {{value}}",
+  "HomePage":{
+    "title":"Home",
+    "content":"<div>Deneme 1</div>"
+  },
+  "AddToCart":"Sepete Ekle"
+}

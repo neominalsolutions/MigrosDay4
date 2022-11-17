@@ -1,0 +1,11 @@
+{
+  "HELLO": "Hello {{value}}",
+  "HomePage":{
+    "title":"Home",
+    "content":"<div>Test 1</div>"
+  },
+  "ProductsPage":{
+    "unitprice":"Unit Price",
+    "stock":"Stock"
+  }
+}
