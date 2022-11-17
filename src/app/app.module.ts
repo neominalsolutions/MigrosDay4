@@ -10,6 +10,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LanguageServiceLoaderFactory } from './MultiTranslateHttpLoader';
 import { ProductsPageComponent } from './products-page/products-page.component';
 
+
 // assets altında i18n json dosyalarına bakar. varsıylan lokasyon
 
 export function HttpLoaderFactory(http: HttpClient) {
