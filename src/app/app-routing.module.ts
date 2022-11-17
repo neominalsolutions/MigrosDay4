@@ -3,11 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { PreloadAllModules } from '@angular/router';
+import { LoginPageComponent } from './login-page/login-page.component';
 // eğer lazyloaded kullansak dahi tüm moüller uygulama çalışmadan önce yüklensin istersek PreloadAllModules  // imports: [RouterModule.forRoot(routes, { preloadingStrategy:PreloadAllModules })], şekilde kullanabiliriz.
 
 const routes: Routes = [{
   path:'home',
   component:HomePageComponent
+},
+{
+  path:'login',
+  component:LoginPageComponent
 },
 {
   path:'products',

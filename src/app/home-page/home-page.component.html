@@ -2,6 +2,21 @@
 <p innerHtml="{{'HomePage.content' | translate}}"> </p>
 
 
+<!-- authenticate olan görsün  -->
+<div *ngIf="profile.Authenticated">
+
+login olan kullanıcı : {{profile.getEmail()}} <button (click)="logOut()">Oturumu Kapat</button>
+<br>
+
+roles: {{profile.getRoles()}}
+<br>
+
+token: {{profile.getToken()}}
+<br>
+
+</div>
+
+
 <div *ngIf="show">
   <button>Sadece Türkiyedeki Kullanıcılara göster</button>
 </div>

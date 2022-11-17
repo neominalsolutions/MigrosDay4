@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LanguageServiceLoaderFactory } from './MultiTranslateHttpLoader';
 import { ProductsPageComponent } from './products-page/products-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 // assets altında i18n json dosyalarına bakar. varsıylan lokasyon
@@ -26,12 +28,14 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HomePageComponent,
-    ProductsPageComponent
+    ProductsPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

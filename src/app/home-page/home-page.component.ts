@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { LoginService } from '../login-page/login.service';
+import { ProfileService } from '../login-page/profile.service';
 
 @Component({
   templateUrl: './home-page.component.html',
@@ -9,7 +11,7 @@ export class HomePageComponent implements OnInit {
 
   show:boolean = false;
 
-  constructor(private translate:TranslateService) { }
+  constructor(private translate:TranslateService, public profile:ProfileService, private loginService:LoginService) { }
 
   ngOnInit(): void {
 
@@ -22,6 +24,10 @@ export class HomePageComponent implements OnInit {
       }
     })
     
+  }
+
+  logOut(){
+    this.loginService.logout();
   }
 
 }
