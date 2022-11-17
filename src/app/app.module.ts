@@ -11,6 +11,8 @@ import { LanguageServiceLoaderFactory } from './MultiTranslateHttpLoader';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AccessDeniedPageComponent } from './access-denied-page/access-denied-page.component';
+
 
 
 // assets altında i18n json dosyalarına bakar. varsıylan lokasyon
@@ -29,7 +31,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     HomePageComponent,
     ProductsPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    AccessDeniedPageComponent,
+    
   ],
   imports: [
     BrowserModule,

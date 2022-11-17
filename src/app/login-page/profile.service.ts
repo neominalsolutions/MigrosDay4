@@ -29,6 +29,8 @@ export class ProfileService {
 
   setProfile(profile:Profile){
     // state de profile$ tanımlanmış olan bir değişkene globalden erişlecek olan bir değer atadık
+    localStorage.setItem('profile', JSON.stringify(profile));
+
     this.profile$.next(profile);
     this.authenticated$.next(true);
   }
@@ -49,11 +51,13 @@ export class ProfileService {
   if(localStorage.getItem('profile') != undefined && this.profile$.getValue() != {} as Profile) {
     
     let _profile = JSON.parse(storage) as Profile;
-
     console.log('_profile', _profile);
 
     this.profile$.next(_profile);
     this.authenticated$.next(true);
+  } else {
+    this.profile$.next({} as Profile);
+    this.authenticated$.next(false);
   }
  }
 

@@ -22,7 +22,7 @@ export class LoginService {
         console.log('map', response);
      
           return {
-            email:'eve.holt@reqres.in',
+            email:param.email,
             roles:['order-manager'],
             token:response.token
           }
@@ -32,7 +32,7 @@ export class LoginService {
         // audit işlemi için tercih ederiz.
         console.log('tap', response);
         // localstorage üzerinde login bilgilerini set et
-        localStorage.setItem('profile', JSON.stringify(response));
+      
         // uygulama hard reload olmadığı sürece ben bilgilere state üzerinden oluşacağım.
         // ama uygulama reload olursa localstorage tan bilgiler varsa getirip state güncelleyeceğim
         this.profileService.setProfile(response as Profile);
@@ -52,7 +52,8 @@ export class LoginService {
 
   logout(){
     this.profileService.reset();
-    this.router.navigate(['login']);
+    window.location.href = "/login";
+    // this.router.navigate(['login']);
   }
 }
 
