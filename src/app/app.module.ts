@@ -12,6 +12,8 @@ import { ProductsPageComponent } from './products-page/products-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AccessDeniedPageComponent } from './access-denied-page/access-denied-page.component';
+import { PermissionDirective } from './permission.directive';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -32,14 +34,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomePageComponent,
     ProductsPageComponent,
     LoginPageComponent,
-    AccessDeniedPageComponent,
-    
+    AccessDeniedPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    SharedModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
