@@ -5,6 +5,7 @@ export interface Profile {
   email:string;
   token:string;
   roles:string[];
+  permissions:string[];
 }
 
 // amaç profile service üzerinden diğer componentlere bazı profile bilgilerini aktarabilmek onlara merkezi bir store mekanizmasında bağlanmak. Global olarak rxjs ile state management yapmış olduk
@@ -75,6 +76,11 @@ export class ProfileService {
   getToken(){
     this.checkLocalStorage();
     return this.profile$.getValue().token;
+  }
+
+  getPermissions(){
+    this.checkLocalStorage();
+    return this.profile$.getValue().permissions;
   }
 
   // property tanımlama işlemi

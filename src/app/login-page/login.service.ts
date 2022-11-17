@@ -24,6 +24,7 @@ export class LoginService {
           return {
             email:param.email,
             roles:['order-manager'],
+            permissions:['InvoiceRead','InvoiceCopy','DownloadInvoiceReport'],
             token:response.token
           }
         
