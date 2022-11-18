@@ -20,12 +20,14 @@ export class LoginService {
       map((response:any) => {
 
         console.log('map', response);
+
+        const JwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiZW1haWwiOiJldmUuaG9sdEByZXFyZXMuaW4iLCJpYXQiOjE1MTYyMzkwMjJ9.FwKx27Gx3r6mpWklHpWVrEbXGlJNk7Tp0C2IYCxdumU'
      
           return {
             email:param.email,
             roles:['order-manager','customer-manager'],
             permissions:['InvoiceRead','InvoiceCopy','DownloadInvoiceReport'],
-            token:response.token
+            token:JwtToken
           }
         
       }),

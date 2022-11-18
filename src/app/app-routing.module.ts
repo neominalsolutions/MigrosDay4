@@ -6,6 +6,7 @@ import { PreloadAllModules } from '@angular/router';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ModuleGuard } from './module.guard';
 import { AccessDeniedPageComponent } from './access-denied-page/access-denied-page.component';
+import { UsersPageComponent } from './users-page/users-page.component';
 // eğer lazyloaded kullansak dahi tüm moüller uygulama çalışmadan önce yüklensin istersek PreloadAllModules  // imports: [RouterModule.forRoot(routes, { preloadingStrategy:PreloadAllModules })], şekilde kullanabiliriz.
 
 const routes: Routes = [{
@@ -19,6 +20,10 @@ const routes: Routes = [{
 {
   path: 'products',
   component: ProductsPageComponent
+},
+{
+  path: 'users',
+  component: UsersPageComponent
 },
 {
   path: 'access-denied',

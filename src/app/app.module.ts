@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -14,6 +14,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AccessDeniedPageComponent } from './access-denied-page/access-denied-page.component';
 import { PermissionDirective } from './permission.directive';
 import { SharedModule } from './shared/shared.module';
+import { UsersPageComponent } from './users-page/users-page.component';
+import { TokenInterceptor } from './token.interceptor';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 
@@ -34,7 +37,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomePageComponent,
     ProductsPageComponent,
     LoginPageComponent,
-    AccessDeniedPageComponent
+    AccessDeniedPageComponent,
+    UsersPageComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,9 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
   })
   ],
-  providers: [TranslateService],
+  providers: [TranslateService, 
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

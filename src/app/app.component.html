@@ -5,11 +5,14 @@
   &nbsp;
   <a routerLink="products">Products</a>
   &nbsp;
+  <a routerLink="users">Users</a>
+  &nbsp;
   <a routerLink="customers">Customer Module</a>
   &nbsp;
   <a routerLink="orders">Order Module</a>
   &nbsp;
   <a routerLink="login">Login Page</a>
+
 </nav>
 
 
@@ -34,5 +37,7 @@
 
 <button (click)="getLangValue()">Translate Instant Kullanımı</button>
 
+<!-- uygulama genelinde görünmesi için appcomponent -->
+<app-spinner></app-spinner>
 
 <router-outlet></router-outlet>
